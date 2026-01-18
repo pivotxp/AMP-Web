@@ -7,13 +7,12 @@ export default function Hero() {
   return (
     <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
       {/* Video Background */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 bg-black">
         <video
           autoPlay
           muted
           loop
           playsInline
-          poster="/media/IMG_2240.jpeg"
           className="w-full h-full object-cover"
         >
           <source src="/media/copy_DACDA6F0-0261-43AC-A720-AB1E54410F3E.mov" type="video/quicktime" />
