@@ -25,10 +25,15 @@ export default function Hero() {
       <div className="absolute inset-0 z-5 flex items-center justify-center pointer-events-none overflow-hidden">
         <motion.div
           initial={{ scale: 5, opacity: 0, filter: "blur(20px)" }}
-          animate={{ scale: 1, opacity: 0.15, filter: "blur(0px)" }}
+          animate={{ 
+            scale: [5, 1, 1], 
+            opacity: [0, 0.3, 0], 
+            filter: ["blur(20px)", "blur(0px)", "blur(10px)"] 
+          }}
           transition={{ 
-            duration: 1.2, 
-            ease: [0.23, 1, 0.32, 1], // Custom cubic-bezier for "slam" feel
+            duration: 1.5, 
+            ease: [0.23, 1, 0.32, 1],
+            times: [0, 0.4, 1],
             delay: 0.2 
           }}
           className="relative w-[150%] aspect-square max-w-[1200px]"
